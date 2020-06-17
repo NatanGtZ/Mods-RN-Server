@@ -1,0 +1,197 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  IELoadingPlugin (ImmersiveEngineering-core-0.12-89.jar)
+  EnderCorePlugin (EnderCore-1.12.2-0.5.69-core.jar)
+  MekanismCoremod (Mekanism-1.12.2-9.8.3.390.jar)
+  OpenModsCorePlugin (OpenModsLib-1.12.2.jar)
+Contact their authors BEFORE contacting forge
+
+// Don't be sad, have a hug! <3
+
+Time: 14/06/20 15:10
+Description: Exception in server tick loop
+
+net.minecraftforge.fml.common.LoaderExceptionModCrash: Caught exception from Modpack Config Checker (concheckrmd)
+Caused by: java.lang.NoClassDefFoundError: net/minecraft/client/gui/GuiScreen
+	at java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.lang.Class.privateGetDeclaredConstructors(Unknown Source)
+	at java.lang.Class.getConstructor0(Unknown Source)
+	at java.lang.Class.getConstructor(Unknown Source)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.register(EventBus.java:128)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.register(EventBus.java:112)
+	at com.matt_r__.ConfigChecker.Main.runChecks(Main.java:147)
+	at com.matt_r__.ConfigChecker.Main.preInitServer(Main.java:98)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraftforge.fml.common.FMLModContainer.handleModStateEvent(FMLModContainer.java:637)
+	at sun.reflect.GeneratedMethodAccessor9.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
+	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
+	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
+	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
+	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
+	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
+	at net.minecraftforge.fml.common.LoadController.sendEventToModContainer(LoadController.java:219)
+	at net.minecraftforge.fml.common.LoadController.propogateStateMessage(LoadController.java:197)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
+	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
+	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
+	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
+	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
+	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
+	at net.minecraftforge.fml.common.LoadController.distributeStateMessage(LoadController.java:136)
+	at net.minecraftforge.fml.common.Loader.preinitializeMods(Loader.java:629)
+	at net.minecraftforge.fml.server.FMLServerHandler.beginServerLoading(FMLServerHandler.java:99)
+	at net.minecraftforge.fml.common.FMLCommonHandler.onServerStart(FMLCommonHandler.java:333)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71197_b(DedicatedServer.java:125)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:486)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.ClassNotFoundException: net.minecraft.client.gui.GuiScreen
+	at net.minecraft.launchwrapper.LaunchClassLoader.findClass(LaunchClassLoader.java:191)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 43 more
+Caused by: net.minecraftforge.fml.common.asm.ASMTransformerWrapper$TransformerException: Exception in class transformer net.minecraftforge.fml.common.asm.transformers.SideTransformer@2bfbffb2 from coremod FMLCorePlugin
+	at net.minecraftforge.fml.common.asm.ASMTransformerWrapper$TransformerWrapper.transform(ASMTransformerWrapper.java:260)
+	at net.minecraft.launchwrapper.LaunchClassLoader.runTransformers(LaunchClassLoader.java:279)
+	at net.minecraft.launchwrapper.LaunchClassLoader.findClass(LaunchClassLoader.java:176)
+	... 45 more
+Caused by: java.lang.RuntimeException: Attempted to load class blk for invalid side SERVER
+	at net.minecraftforge.fml.common.asm.transformers.SideTransformer.transform(SideTransformer.java:62)
+	at net.minecraftforge.fml.common.asm.ASMTransformerWrapper$TransformerWrapper.transform(ASMTransformerWrapper.java:256)
+	... 47 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_251, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 2265494688 bytes (2160 MB) / 2643984384 bytes (2521 MB) up to 4660396032 bytes (4444 MB)
+	JVM Flags: 2 total; -Xmx5000M -Xms1024M
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.42 Powered by Forge 14.23.5.2847 72 mods loaded, 72 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State | ID                                | Version            | Source                                        | Signature                                |
+	|:----- |:--------------------------------- |:------------------ |:--------------------------------------------- |:---------------------------------------- |
+	| LCH   | minecraft                         | 1.12.2             | minecraft.jar                                 | None                                     |
+	| LCH   | mcp                               | 9.42               | minecraft.jar                                 | None                                     |
+	| LCH   | FML                               | 8.0.99.99          | forge-1.12.2-14.23.5.2847-universal.jar       | None                                     |
+	| LCH   | forge                             | 14.23.5.2847       | forge-1.12.2-14.23.5.2847-universal.jar       | None                                     |
+	| LCH   | openmodscore                      | 0.12.2             | minecraft.jar                                 | None                                     |
+	| LCE   | concheckrmd                       | 1.9.0              | Modpack-Configuration-Checker-Mod-1.12.2.jar  | None                                     |
+	| LC    | appliedenergistics2               | rv6-stable-7       | appliedenergistics2-rv6-stable-7.jar          | dfa4d3ac143316c6f32aa1a1beda1e34d42132e5 |
+	| LC    | bno                               | 1.12.2-1.0.4.0     | BasicNetherOres-1.12.2-1.0.4.0.jar            | None                                     |
+	| LC    | baubles                           | 1.5.2              | Baubles-Mod-1.12.2.jar                        | None                                     |
+	| LC    | bibliocraft                       | 2.4.5              | BiblioCraft[v2.4.5][MC1.12.2].jar             | None                                     |
+	| LC    | guideapi                          | 1.12-2.1.8-63      | Guide-API-1.12.2.jar                          | None                                     |
+	| LC    | bloodmagic                        | 1.12.2-2.4.3-105   | BloodMagic-1.12.2-2.4.3-105.jar               | None                                     |
+	| LC    | jei                               | 4.15.0.293         | jei_1.12.2-4.15.0.293.jar                     | None                                     |
+	| LC    | thaumcraft                        | 6.1.BETA26         | Thaumcraft-Mod-1.12.2.jar                     | None                                     |
+	| LC    | botania                           | r1.10-363          | Botania-Mod-1.12.2.jar                        | None                                     |
+	| LC    | codechickenlib                    | 3.2.3.358          | CodeChickenLib-1.12.2.jar                     | f1850c39b2516232a2108a7bd84d1cb5df93b261 |
+	| LC    | redstoneflux                      | 2.1.0              | Redstone-Flux-API-1.12.2.jar                  | 8a6abf2cb9e141b866580d369ba6548732eff25f |
+	| LC    | brandonscore                      | 2.4.12             | Brandons-Core-1.12.2.jar                      | None                                     |
+	| LC    | buildcraftlib                     | 7.99.24.1          | BuildCraft-Mod-1.12.2.jar                     | None                                     |
+	| LC    | buildcraftcore                    | 7.99.24.1          | BuildCraft-Mod-1.12.2.jar                     | None                                     |
+	| LC    | buildcraftbuilders                | 7.99.24.1          | BuildCraft-Mod-1.12.2.jar                     | None                                     |
+	| LC    | buildcrafttransport               | 7.99.24.1          | BuildCraft-Mod-1.12.2.jar                     | None                                     |
+	| LC    | buildcraftsilicon                 | 7.99.24.1          | BuildCraft-Mod-1.12.2.jar                     | None                                     |
+	| LC    | buildcraftenergy                  | 7.99.24.1          | BuildCraft-Mod-1.12.2.jar                     | None                                     |
+	| LC    | forestry                          | 5.8.2.408          | Forestry-Mod-1.12.2.jar                       | None                                     |
+	| LC    | buildcraftcompat                  | 7.99.24.1          | BuildCraft-Mod-1.12.2.jar                     | None                                     |
+	| LC    | buildcraftfactory                 | 7.99.24.1          | BuildCraft-Mod-1.12.2.jar                     | None                                     |
+	| LC    | buildcraftrobotics                | 7.99.24.1          | BuildCraft-Mod-1.12.2.jar                     | None                                     |
+	| LC    | cctweaked                         | 1.86.2             | CC-Tweaked-Mod-1.12.2.jar                     | None                                     |
+	| LC    | computercraft                     | 1.86.2             | CC-Tweaked-Mod-1.12.2.jar                     | None                                     |
+	| LC    | chisel                            | MC1.12.2-0.2.0.31  | Chisel-Mod-1.12.2.jar                         | None                                     |
+	| LC    | cofhcore                          | 4.6.3              | CoFH-Core-1.12.2.jar                          | None                                     |
+	| LC    | cofhworld                         | 1.3.0              | CoFHWorld-1.12.2.jar                          | 8a6abf2cb9e141b866580d369ba6548732eff25f |
+	| LC    | thermalfoundation                 | 2.6.3              | Thermal-Foundation-Mod-1.12.2.jar             | 8a6abf2cb9e141b866580d369ba6548732eff25f |
+	| LC    | draconicevolution                 | 2.3.22             | Draconic-Evolution-Mod-1.12.2.jar             | None                                     |
+	| LC    | endercore                         | 1.12.2-0.5.69      | EnderCore-1.12.2.jar                          | None                                     |
+	| LC    | thermalexpansion                  | 5.5.7              | ThermalExpansion-1.12.2-5.5.7.1-universal.jar | None                                     |
+	| LC    | enderio                           | 5.1.51             | Ender-IO-Mod-1.12.2.jar                       | None                                     |
+	| LC    | enderiointegrationtic             | 5.1.51             | Ender-IO-Mod-1.12.2.jar                       | None                                     |
+	| LC    | enderiobase                       | 5.1.51             | Ender-IO-Mod-1.12.2.jar                       | None                                     |
+	| LC    | enderioconduits                   | 5.1.51             | Ender-IO-Mod-1.12.2.jar                       | None                                     |
+	| LC    | enderioconduitsappliedenergistics | 5.1.51             | Ender-IO-Mod-1.12.2.jar                       | None                                     |
+	| LC    | enderioconduitsopencomputers      | 5.1.51             | Ender-IO-Mod-1.12.2.jar                       | None                                     |
+	| LC    | enderioconduitsrefinedstorage     | 5.1.51             | Ender-IO-Mod-1.12.2.jar                       | None                                     |
+	| LC    | enderiointegrationforestry        | 5.1.51             | Ender-IO-Mod-1.12.2.jar                       | None                                     |
+	| LC    | mantle                            | 1.12-1.3.3.55      | Mantle-Mod-1.12.2.jar                         | None                                     |
+	| LC    | twilightforest                    | 3.10.1013          | twilightforest-1.12.2-3.10.1013-universal.jar | None                                     |
+	| LC    | tconstruct                        | 1.12.2-2.12.0.115  | Tinkers-Construct-Mod-1.12.2.jar              | None                                     |
+	| LC    | enderiointegrationticlate         | 5.1.51             | Ender-IO-Mod-1.12.2.jar                       | None                                     |
+	| LC    | enderiomachines                   | 5.1.51             | Ender-IO-Mod-1.12.2.jar                       | None                                     |
+	| LC    | enderiopowertools                 | 5.1.51             | Ender-IO-Mod-1.12.2.jar                       | None                                     |
+	| LC    | enderstorage                      | 2.4.6.137          | Ender-Storage-Mod-1.12.2.jar                  | f1850c39b2516232a2108a7bd84d1cb5df93b261 |
+	| LC    | extrautils2                       | 1.0                | Extra-Utilities-Mod-1.12.2.jar                | None                                     |
+	| LC    | zerocore                          | 1.12.2-0.1.2.8     | zerocore-1.12.2-0.1.2.8.jar                   | None                                     |
+	| LC    | bigreactors                       | 1.12.2-0.4.5.67    | ExtremeReactors-1.12.2-0.4.5.67.jar           | None                                     |
+	| LC    | ironchest                         | 1.12.2-7.0.67.844  | Iron-Chests-Mod-1.12.2.jar                    | None                                     |
+	| LC    | mcjtylib_ng                       | 3.5.4              | McJtyLib-1.12.2.jar                           | None                                     |
+	| LC    | mekanism                          | 1.12.2-9.8.3.390   | Mekanism-1.12.2-9.8.3.390.jar                 | None                                     |
+	| LC    | mekanismgenerators                | 1.12.2-9.8.3.390   | MekanismGenerators-1.12.2-9.8.3.390.jar       | None                                     |
+	| LC    | mekanismtools                     | 1.12.2-9.8.3.390   | MekanismTools-1.12.2-9.8.3.390.jar            | None                                     |
+	| LC    | mystcraft                         | 0.13.7.04          | Mystcraft-Mod-1.12.2.jar                      | None                                     |
+	| LC    | openmods                          | 0.12.2             | OpenModsLib-1.12.2.jar                        | d2a9a8e8440196e26a268d1f3ddc01b2e9c572a5 |
+	| LC    | openblocks                        | 1.8.1              | OpenBlocks-Mod-1.12.2.jar                     | d2a9a8e8440196e26a268d1f3ddc01b2e9c572a5 |
+	| LC    | pneumaticcraft                    | 1.12.2-0.11.14-395 | PneumaticCraft-Mod-1.12.2.jar                 | None                                     |
+	| LC    | railcraft                         | 12.0.0-beta-5      | Railcraft-Mod-1.12.2.jar                      | a0c255ac501b2749537d5824bb0f0588bf0320fa |
+	| LC    | reborncore                        | 3.19.4.529         | RebornCore-1.12.2-3.19.4.529-universal.jar    | 8727a3141c8ec7f173b87aa78b9b9807867c4e6b |
+	| LC    | xreliquary                        | 1.12.2-1.3.4.796   | Reliquary-Mod-1.12.2.jar                      | None                                     |
+	| LC    | rftools                           | 7.70               | RFTools-Mod-1.12.2.jar                        | None                                     |
+	| LC    | rftoolscontrol                    | 2.0.2              | RFTools-Control-Mod-1.12.2.jar                | None                                     |
+	| LC    | stevescarts                       | 2.4.32.137         | StevesCarts-1.12.2-2.4.32.137.jar             | None                                     |
+	| LC    | thaumicterminal                   | 1.0.12             | Thaumic-Terminal-Mod-1.12.2.jar               | None                                     |
+	| LC    | immersiveengineering              | 0.12-89            | Immersive-Engineering-Mod-1.12.2.jar          | 4cb49fcde3b43048c9889e0a3d083225da926334 |
+
+	Loaded coremods (and transformers): 
+IELoadingPlugin (ImmersiveEngineering-core-0.12-89.jar)
+  blusunrize.immersiveengineering.common.asm.IEClassTransformer
+EnderCorePlugin (EnderCore-1.12.2-0.5.69-core.jar)
+  com.enderio.core.common.transform.EnderCoreTransformer
+  com.enderio.core.common.transform.SimpleMixinPatcher
+MekanismCoremod (Mekanism-1.12.2-9.8.3.390.jar)
+  mekanism.coremod.KeybindingMigrationHelper
+OpenModsCorePlugin (OpenModsLib-1.12.2.jar)
+  openmods.core.OpenModsClassTransformer
+	OpenModsLib class transformers: [llama_null_fix:FINISHED],[horse_base_null_fix:FINISHED],[pre_world_render_hook:ENABLED],[player_render_hook:ENABLED],[horse_null_fix:FINISHED]
+	AE2 Version: stable rv6-stable-7 for Forge 14.23.5.2768
+	Pulsar/tconstruct loaded Pulses: 
+		- TinkerCommons (Enabled/Forced)
+		- TinkerWorld (Enabled/Not Forced)
+		- TinkerTools (Enabled/Not Forced)
+		- TinkerHarvestTools (Enabled/Forced)
+		- TinkerMeleeWeapons (Enabled/Forced)
+		- TinkerRangedWeapons (Enabled/Forced)
+		- TinkerModifiers (Enabled/Forced)
+		- TinkerSmeltery (Enabled/Not Forced)
+		- TinkerGadgets (Enabled/Not Forced)
+		- TinkerOredict (Enabled/Forced)
+		- TinkerIntegration (Enabled/Forced)
+		- TinkerFluids (Enabled/Forced)
+		- TinkerMaterials (Enabled/Forced)
+		- TinkerModelRegister (Enabled/Forced)
+		- chiselIntegration (Enabled/Not Forced)
+
+	Profiler Position: N/A (disabled)
+	Is Modded: Definitely; Server brand changed to 'fml,forge'
+	Type: Dedicated Server (map_server.txt)

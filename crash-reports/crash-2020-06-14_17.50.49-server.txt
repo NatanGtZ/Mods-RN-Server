@@ -1,0 +1,203 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  IELoadingPlugin (ImmersiveEngineering-core-0.12-89.jar)
+  Inventory Tweaks Coremod (InventoryTweaks-1.63.jar)
+  TransformerLoader (OpenComputers-MC1.12.2-1.7.5.192.jar)
+  EnderCorePlugin (EnderCore-1.12.2-0.5.69-core.jar)
+  MekanismCoremod (Mekanism-1.12.2-9.8.3.390.jar)
+  OpenModsCorePlugin (OpenModsLib-1.12.2.jar)
+  CTMCorePlugin (CTM-MC1.12.2-1.0.2.31.jar)
+Contact their authors BEFORE contacting forge
+
+// Don't do that.
+
+Time: 14/06/20 17:50
+Description: Exception ticking world
+
+java.util.ConcurrentModificationException
+	at java.util.HashMap$HashIterator.remove(Unknown Source)
+	at net.minecraft.world.gen.ChunkProviderServer.func_73156_b(ChunkProviderServer.java:262)
+	at net.minecraft.world.WorldServer.func_72835_b(WorldServer.java:207)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:756)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71190_q(DedicatedServer.java:397)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:668)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:526)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at java.util.HashMap$HashIterator.remove(Unknown Source)
+	at net.minecraft.world.gen.ChunkProviderServer.func_73156_b(ChunkProviderServer.java:262)
+	at net.minecraft.world.WorldServer.func_72835_b(WorldServer.java:207)
+
+-- Affected level --
+Details:
+	Level name: world
+	All players: 0 total; []
+	Chunk stats: ServerChunkCache: 374 Drop: 119
+	Level seed: 829867855204520310
+	Level generator: ID 00 - default, ver 1. Features enabled: true
+	Level generator options: 
+	Level spawn location: World: (244,64,256), Chunk: (at 4,4,0 in 15,16; contains blocks 240,0,256 to 255,255,271), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 60426 game time, 67390 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 64865 (now: false), thunder time: 99278 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:756)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71190_q(DedicatedServer.java:397)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:668)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:526)
+	at java.lang.Thread.run(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_251, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1941267672 bytes (1851 MB) / 3349151744 bytes (3194 MB) up to 4660396032 bytes (4444 MB)
+	JVM Flags: 2 total; -Xmx5000M -Xms1024M
+	IntCache: cache: 0, tcache: 8, allocated: 22, tallocated: 86
+	FML: MCP 9.42 Powered by Forge 14.23.5.2847 76 mods loaded, 76 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State  | ID                                | Version                  | Source                                        | Signature                                |
+	|:------ |:--------------------------------- |:------------------------ |:--------------------------------------------- |:---------------------------------------- |
+	| LCHIJA | minecraft                         | 1.12.2                   | minecraft.jar                                 | None                                     |
+	| LCHIJA | mcp                               | 9.42                     | minecraft.jar                                 | None                                     |
+	| LCHIJA | FML                               | 8.0.99.99                | forge-1.12.2-14.23.5.2847-universal.jar       | None                                     |
+	| LCHIJA | forge                             | 14.23.5.2847             | forge-1.12.2-14.23.5.2847-universal.jar       | None                                     |
+	| LCHIJA | openmodscore                      | 0.12.2                   | minecraft.jar                                 | None                                     |
+	| LCHIJA | opencomputers|core                | 1.7.5.192                | minecraft.jar                                 | None                                     |
+	| LCHIJA | actuallyadditions                 | 1.12.2-r151              | ActuallyAdditions-1.12.2-r151-2.jar           | None                                     |
+	| LCHIJA | appliedenergistics2               | rv6-stable-7             | appliedenergistics2-rv6-stable-7.jar          | dfa4d3ac143316c6f32aa1a1beda1e34d42132e5 |
+	| LCHIJA | bno                               | 1.12.2-1.0.4.0           | BasicNetherOres-1.12.2-1.0.4.0.jar            | None                                     |
+	| LCHIJA | baubles                           | 1.5.2                    | Baubles-Mod-1.12.2.jar                        | None                                     |
+	| LCHIJA | bibliocraft                       | 2.4.5                    | BiblioCraft[v2.4.5][MC1.12.2].jar             | None                                     |
+	| LCHIJA | guideapi                          | 1.12-2.1.8-63            | Guide-API-1.12.2.jar                          | None                                     |
+	| LCHIJA | bloodmagic                        | 1.12.2-2.4.3-105         | BloodMagic-1.12.2-2.4.3-105.jar               | None                                     |
+	| LCHIJA | jei                               | 4.15.0.293               | jei_1.12.2-4.15.0.293.jar                     | None                                     |
+	| LCHIJA | thaumcraft                        | 6.1.BETA26               | Thaumcraft-Mod-1.12.2.jar                     | None                                     |
+	| LCHIJA | botania                           | r1.10-363                | Botania-Mod-1.12.2.jar                        | None                                     |
+	| LCHIJA | codechickenlib                    | 3.2.3.358                | CodeChickenLib-1.12.2.jar                     | f1850c39b2516232a2108a7bd84d1cb5df93b261 |
+	| LCHIJA | redstoneflux                      | 2.1.0                    | Redstone-Flux-API-1.12.2.jar                  | 8a6abf2cb9e141b866580d369ba6548732eff25f |
+	| LCHIJA | brandonscore                      | 2.4.12                   | Brandons-Core-1.12.2.jar                      | None                                     |
+	| LCHIJA | buildcraftlib                     | 7.99.24.1                | BuildCraft-Mod-1.12.2.jar                     | None                                     |
+	| LCHIJA | buildcraftcore                    | 7.99.24.1                | BuildCraft-Mod-1.12.2.jar                     | None                                     |
+	| LCHIJA | buildcraftbuilders                | 7.99.24.1                | BuildCraft-Mod-1.12.2.jar                     | None                                     |
+	| LCHIJA | buildcrafttransport               | 7.99.24.1                | BuildCraft-Mod-1.12.2.jar                     | None                                     |
+	| LCHIJA | buildcraftsilicon                 | 7.99.24.1                | BuildCraft-Mod-1.12.2.jar                     | None                                     |
+	| LCHIJA | buildcraftenergy                  | 7.99.24.1                | BuildCraft-Mod-1.12.2.jar                     | None                                     |
+	| LCHIJA | forestry                          | 5.8.2.408                | Forestry-Mod-1.12.2.jar                       | None                                     |
+	| LCHIJA | buildcraftcompat                  | 7.99.24.1                | BuildCraft-Mod-1.12.2.jar                     | None                                     |
+	| LCHIJA | buildcraftfactory                 | 7.99.24.1                | BuildCraft-Mod-1.12.2.jar                     | None                                     |
+	| LCHIJA | buildcraftrobotics                | 7.99.24.1                | BuildCraft-Mod-1.12.2.jar                     | None                                     |
+	| LCHIJA | cctweaked                         | 1.86.2                   | CC-Tweaked-Mod-1.12.2.jar                     | None                                     |
+	| LCHIJA | computercraft                     | 1.86.2                   | CC-Tweaked-Mod-1.12.2.jar                     | None                                     |
+	| LCHIJA | chisel                            | MC1.12.2-1.0.2.45        | Chisel-MC1.12.2-1.0.2.45.jar                  | None                                     |
+	| LCHIJA | cofhcore                          | 4.6.3                    | CoFH-Core-1.12.2.jar                          | None                                     |
+	| LCHIJA | cofhworld                         | 1.3.0                    | CoFHWorld-1.12.2.jar                          | 8a6abf2cb9e141b866580d369ba6548732eff25f |
+	| LCHIJA | thermalfoundation                 | 2.6.3                    | Thermal-Foundation-Mod-1.12.2.jar             | 8a6abf2cb9e141b866580d369ba6548732eff25f |
+	| LCHIJA | draconicevolution                 | 2.3.22                   | Draconic-Evolution-Mod-1.12.2.jar             | None                                     |
+	| LCHIJA | endercore                         | 1.12.2-0.5.69            | EnderCore-1.12.2.jar                          | None                                     |
+	| LCHIJA | thermalexpansion                  | 5.5.7                    | ThermalExpansion-1.12.2-5.5.7.1-universal.jar | None                                     |
+	| LCHIJA | enderio                           | 5.1.51                   | Ender-IO-Mod-1.12.2.jar                       | None                                     |
+	| LCHIJA | enderiointegrationtic             | 5.1.51                   | Ender-IO-Mod-1.12.2.jar                       | None                                     |
+	| LCHIJA | enderiobase                       | 5.1.51                   | Ender-IO-Mod-1.12.2.jar                       | None                                     |
+	| LCHIJA | enderioconduits                   | 5.1.51                   | Ender-IO-Mod-1.12.2.jar                       | None                                     |
+	| LCHIJA | enderioconduitsappliedenergistics | 5.1.51                   | Ender-IO-Mod-1.12.2.jar                       | None                                     |
+	| LCHIJA | opencomputers                     | 1.7.5.192                | OpenComputers-MC1.12.2-1.7.5.192.jar          | None                                     |
+	| LCHIJA | enderioconduitsopencomputers      | 5.1.51                   | Ender-IO-Mod-1.12.2.jar                       | None                                     |
+	| LCHIJA | enderioconduitsrefinedstorage     | 5.1.51                   | Ender-IO-Mod-1.12.2.jar                       | None                                     |
+	| LCHIJA | enderiointegrationforestry        | 5.1.51                   | Ender-IO-Mod-1.12.2.jar                       | None                                     |
+	| LCHIJA | mantle                            | 1.12-1.3.3.55            | Mantle-Mod-1.12.2.jar                         | None                                     |
+	| LCHIJA | twilightforest                    | 3.10.1013                | twilightforest-1.12.2-3.10.1013-universal.jar | None                                     |
+	| LCHIJA | tconstruct                        | 1.12.2-2.12.0.115        | Tinkers-Construct-Mod-1.12.2.jar              | None                                     |
+	| LCHIJA | enderiointegrationticlate         | 5.1.51                   | Ender-IO-Mod-1.12.2.jar                       | None                                     |
+	| LCHIJA | enderiomachines                   | 5.1.51                   | Ender-IO-Mod-1.12.2.jar                       | None                                     |
+	| LCHIJA | enderiopowertools                 | 5.1.51                   | Ender-IO-Mod-1.12.2.jar                       | None                                     |
+	| LCHIJA | enderstorage                      | 2.4.6.137                | Ender-Storage-Mod-1.12.2.jar                  | f1850c39b2516232a2108a7bd84d1cb5df93b261 |
+	| LCHIJA | extrautils2                       | 1.0                      | Extra-Utilities-Mod-1.12.2.jar                | None                                     |
+	| LCHIJA | zerocore                          | 1.12.2-0.1.2.8           | zerocore-1.12.2-0.1.2.8.jar                   | None                                     |
+	| LCHIJA | bigreactors                       | 1.12.2-0.4.5.67          | ExtremeReactors-1.12.2-0.4.5.67.jar           | None                                     |
+	| LCHIJA | inventorytweaks                   | 1.63+release.109.220f184 | InventoryTweaks-1.63.jar                      | 55d2cd4f5f0961410bf7b91ef6c6bf00a766dcbe |
+	| LCHIJA | ironchest                         | 1.12.2-7.0.67.844        | Iron-Chests-Mod-1.12.2.jar                    | None                                     |
+	| LCHIJA | journeymap                        | 1.12.2-5.7.1             | journeymap-1.12.2-5.7.1.jar                   | None                                     |
+	| LCHIJA | mcjtylib_ng                       | 3.5.4                    | McJtyLib-1.12.2.jar                           | None                                     |
+	| LCHIJA | mekanism                          | 1.12.2-9.8.3.390         | Mekanism-1.12.2-9.8.3.390.jar                 | None                                     |
+	| LCHIJA | mekanismgenerators                | 1.12.2-9.8.3.390         | MekanismGenerators-1.12.2-9.8.3.390.jar       | None                                     |
+	| LCHIJA | mekanismtools                     | 1.12.2-9.8.3.390         | MekanismTools-1.12.2-9.8.3.390.jar            | None                                     |
+	| LCHIJA | mystcraft                         | 0.13.7.04                | Mystcraft-Mod-1.12.2.jar                      | None                                     |
+	| LCHIJA | openmods                          | 0.12.2                   | OpenModsLib-1.12.2.jar                        | d2a9a8e8440196e26a268d1f3ddc01b2e9c572a5 |
+	| LCHIJA | openblocks                        | 1.8.1                    | OpenBlocks-Mod-1.12.2.jar                     | d2a9a8e8440196e26a268d1f3ddc01b2e9c572a5 |
+	| LCHIJA | pneumaticcraft                    | 1.12.2-0.11.14-395       | PneumaticCraft-Mod-1.12.2.jar                 | None                                     |
+	| LCHIJA | railcraft                         | 12.0.0-beta-5            | Railcraft-Mod-1.12.2.jar                      | a0c255ac501b2749537d5824bb0f0588bf0320fa |
+	| LCHIJA | reborncore                        | 3.19.4.529               | RebornCore-1.12.2-3.19.4.529-universal.jar    | 8727a3141c8ec7f173b87aa78b9b9807867c4e6b |
+	| LCHIJA | xreliquary                        | 1.12.2-1.3.4.796         | Reliquary-Mod-1.12.2.jar                      | None                                     |
+	| LCHIJA | rftools                           | 7.70                     | RFTools-Mod-1.12.2.jar                        | None                                     |
+	| LCHIJA | rftoolscontrol                    | 2.0.2                    | RFTools-Control-Mod-1.12.2.jar                | None                                     |
+	| LCHIJA | stevescarts                       | 2.4.32.137               | StevesCarts-1.12.2-2.4.32.137.jar             | None                                     |
+	| LCHIJA | thaumicterminal                   | 1.0.12                   | Thaumic-Terminal-Mod-1.12.2.jar               | None                                     |
+	| LCHIJA | immersiveengineering              | 0.12-89                  | Immersive-Engineering-Mod-1.12.2.jar          | 4cb49fcde3b43048c9889e0a3d083225da926334 |
+
+	Loaded coremods (and transformers): 
+IELoadingPlugin (ImmersiveEngineering-core-0.12-89.jar)
+  blusunrize.immersiveengineering.common.asm.IEClassTransformer
+Inventory Tweaks Coremod (InventoryTweaks-1.63.jar)
+  invtweaks.forge.asm.ContainerTransformer
+TransformerLoader (OpenComputers-MC1.12.2-1.7.5.192.jar)
+  li.cil.oc.common.asm.ClassTransformer
+EnderCorePlugin (EnderCore-1.12.2-0.5.69-core.jar)
+  com.enderio.core.common.transform.EnderCoreTransformer
+  com.enderio.core.common.transform.SimpleMixinPatcher
+MekanismCoremod (Mekanism-1.12.2-9.8.3.390.jar)
+  mekanism.coremod.KeybindingMigrationHelper
+OpenModsCorePlugin (OpenModsLib-1.12.2.jar)
+  openmods.core.OpenModsClassTransformer
+CTMCorePlugin (CTM-MC1.12.2-1.0.2.31.jar)
+  team.chisel.ctm.client.asm.CTMTransformer
+	OpenModsLib class transformers: [llama_null_fix:FINISHED],[horse_base_null_fix:FINISHED],[pre_world_render_hook:ENABLED],[player_render_hook:ENABLED],[horse_null_fix:FINISHED]
+	AE2 Version: stable rv6-stable-7 for Forge 14.23.5.2768
+	Pulsar/tconstruct loaded Pulses: 
+		- TinkerCommons (Enabled/Forced)
+		- TinkerWorld (Enabled/Not Forced)
+		- TinkerTools (Enabled/Not Forced)
+		- TinkerHarvestTools (Enabled/Forced)
+		- TinkerMeleeWeapons (Enabled/Forced)
+		- TinkerRangedWeapons (Enabled/Forced)
+		- TinkerModifiers (Enabled/Forced)
+		- TinkerSmeltery (Enabled/Not Forced)
+		- TinkerGadgets (Enabled/Not Forced)
+		- TinkerOredict (Enabled/Forced)
+		- TinkerIntegration (Enabled/Forced)
+		- TinkerFluids (Enabled/Forced)
+		- TinkerMaterials (Enabled/Forced)
+		- TinkerModelRegister (Enabled/Forced)
+		- chiselIntegration (Enabled/Not Forced)
+
+	RebornCore: 
+		Plugin Engine: 0
+		RebornCore Version: 3.19.4.529
+		Runtime Debofucsation 1
+	Ender IO: Found the following problem(s) with your installation (That does NOT mean that Ender IO caused the crash or was involved in it in any way. We add this information to help finding common problems, not as an invitation to post any crash you encounter to Ender IO's issue tracker. Always check the stack trace above to see which mod is most likely failing.):
+                  * Offline mode for dedicated servers is NOT supported by Ender IO.
+                 This may (look up the meaning of 'may' in the dictionary if you're not sure what it means) have caused the error. Try reproducing the crash WITHOUT this/these mod(s) before reporting it.
+
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	!!!You are looking at the diagnostics information, not at the crash.       !!!
+	!!!Scroll up until you see the line with '---- Minecraft Crash Report ----'!!!
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+	AE2 Integration: IC2:OFF, RC:ON, MFR:OFF, Waila:OFF, Mekanism:ON, OpenComputers:ON, THE_ONE_PROBE:OFF, TESLA:OFF, CRAFTTWEAKER:OFF
+	Profiler Position: N/A (disabled)
+	Player Count: 0 / 20; []
+	Is Modded: Definitely; Server brand changed to 'fml,forge'
+	Type: Dedicated Server (map_server.txt)

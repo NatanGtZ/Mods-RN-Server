@@ -1,0 +1,71 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  MekanismCoremod (Mekanism-1.12.2-9.8.3.390.jar)
+Contact their authors BEFORE contacting forge
+
+// Don't be sad, have a hug! <3
+
+Time: 13/06/20 23:49
+Description: Exception in server tick loop
+
+Missing Mods:
+	unknown : need [7.6.0.1,): have missing
+
+net.minecraftforge.fml.common.MissingModsException: Mod treecapitator (TreeCapitator) requires [bspkrscore@[7.6.0.1,)]
+	at net.minecraftforge.fml.common.Loader.sortModList(Loader.java:266)
+	at net.minecraftforge.fml.common.Loader.loadMods(Loader.java:572)
+	at net.minecraftforge.fml.server.FMLServerHandler.beginServerLoading(FMLServerHandler.java:98)
+	at net.minecraftforge.fml.common.FMLCommonHandler.onServerStart(FMLCommonHandler.java:333)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71197_b(DedicatedServer.java:125)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:486)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_251, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 881795024 bytes (840 MB) / 988807168 bytes (943 MB) up to 988807168 bytes (943 MB)
+	JVM Flags: 2 total; -Xmx1024M -Xms1024M
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.42 Powered by Forge 14.23.5.2847 23 mods loaded, 23 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State | ID                 | Version            | Source                                  | Signature |
+	|:----- |:------------------ |:------------------ |:--------------------------------------- |:--------- |
+	| L     | minecraft          | 1.12.2             | minecraft.jar                           | None      |
+	| L     | mcp                | 9.42               | minecraft.jar                           | None      |
+	| L     | FML                | 8.0.99.99          | forge-1.12.2-14.23.5.2847-universal.jar | None      |
+	| L     | forge              | 14.23.5.2847       | forge-1.12.2-14.23.5.2847-universal.jar | None      |
+	| L     | treecapitator      | 1.43.0             | [1.12]TreeCapitator-client-1.43.0.jar   | None      |
+	| L     | baubles            | 1.5.2              | Baubles-Mod-1.12.2.jar                  | None      |
+	| L     | botania            | r1.10-363          | Botania-Mod-1.12.2.jar                  | None      |
+	| L     | cctweaked          | 1.86.2             | CC-Tweaked-Mod-1.12.2.jar               | None      |
+	| L     | computercraft      | 1.86.2             | CC-Tweaked-Mod-1.12.2.jar               | None      |
+	| L     | codechickenlib     | 3.2.3.358          | CodeChickenLib-1.12.2.jar               | None      |
+	| L     | enderstorage       | 2.4.6.137          | Ender-Storage-Mod-1.12.2.jar            | None      |
+	| L     | guideapi           | 1.12-2.1.8-63      | Guide-API-1.12.2.jar                    | None      |
+	| L     | ironchest          | 1.12.2-7.0.67.844  | Iron-Chests-Mod-1.12.2.jar              | None      |
+	| L     | jei                | 4.15.0.293         | jei_1.12.2-4.15.0.293.jar               | None      |
+	| L     | mcjtylib_ng        | 3.5.4              | McJtyLib-1.12.2.jar                     | None      |
+	| L     | mekanism           | 1.12.2-9.8.3.390   | Mekanism-1.12.2-9.8.3.390.jar           | None      |
+	| L     | mekanismgenerators | 1.12.2-9.8.3.390   | MekanismGenerators-1.12.2-9.8.3.390.jar | None      |
+	| L     | mekanismtools      | 1.12.2-9.8.3.390   | MekanismTools-1.12.2-9.8.3.390.jar      | None      |
+	| L     | elevatorid         | 1.3.14             | OpenBlocks-Elevator-Mod-1.12.2.jar      | None      |
+	| L     | pneumaticcraft     | 1.12.2-0.11.14-395 | PneumaticCraft-Mod-1.12.2.jar           | None      |
+	| L     | xreliquary         | 1.12.2-1.3.4.796   | Reliquary-Mod-1.12.2.jar                | None      |
+	| L     | rftoolscontrol     | 2.0.2              | RFTools-Control-Mod-1.12.2.jar          | None      |
+	| L     | rftools            | 7.70               | RFTools-Mod-1.12.2.jar                  | None      |
+
+	Loaded coremods (and transformers): 
+MekanismCoremod (Mekanism-1.12.2-9.8.3.390.jar)
+  mekanism.coremod.KeybindingMigrationHelper
+	Profiler Position: N/A (disabled)
+	Is Modded: Definitely; Server brand changed to 'fml,forge'
+	Type: Dedicated Server (map_server.txt)
